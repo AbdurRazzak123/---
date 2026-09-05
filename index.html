@@ -1495,6 +1495,54 @@ section.news-grid > article:nth-child(6) .news-image img {
   margin:0 0 6px 0 !important;
 }
 </style>
+
+<style id="index-main-image-full-natural-final">
+/* Index main news image: use the full main-column width and preserve the
+   exact Google Sheet image ratio. Nothing is cropped or forced to a fixed height. */
+@media (min-width:769px){
+  main.container{
+    grid-template-columns:3fr 1fr !important;
+  }
+  main.container > #news-container{
+    min-width:0 !important;
+    width:100% !important;
+  }
+  .vertical-news-block{
+    width:100% !important;
+    max-width:none !important;
+    overflow:visible !important;
+  }
+  .vertical-news-block .news-image-top{
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    overflow:visible !important;
+    margin:0 !important;
+  }
+  .vertical-news-block .news-image-top img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    min-height:0 !important;
+    max-width:100% !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+@media (max-width:768px){
+  .vertical-news-block .news-image-top,
+  .vertical-news-block .news-image-top img{
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+  }
+}
+</style>
 </head>
 
 <body>
