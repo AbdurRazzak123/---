@@ -416,6 +416,471 @@ body{background:var(--bn-bg)!important;color:var(--bn-ink)!important;}
 }
 </style>
 
+
+<style id="read-more-button-final-fix">
+/* Match the working Read More button style on all category pages. */
+.read-more-btn{display:inline-block!important;margin-top:10px!important;padding:9px 16px!important;background:var(--bn-green)!important;color:#fff!important;text-decoration:none!important;font-weight:bold!important;border-radius:7px!important;font-size:14px!important;line-height:1.4!important;box-sizing:border-box!important;box-shadow:0 4px 10px rgba(0,106,78,.18)!important;}
+.read-more-btn:hover{background:var(--bn-red)!important;color:#fff!important;}
+</style>
+
+<style id="final-all-pages-theme-sync">
+/* FINAL THEME SYNC: presentation-only. Existing HTML/content/functionality untouched. */
+
+/* Header used by the homepage */
+.site-header{
+  background:linear-gradient(135deg,#004d3a 0%,#006a4e 58%,#0b2f45 100%)!important;
+  border-bottom:4px solid #e31b23!important;
+  box-shadow:0 4px 18px rgba(0,0,0,.14)!important;
+}
+.site-header:before{
+  content:""!important;position:absolute!important;left:0!important;right:0!important;top:0!important;height:4px!important;
+  background:linear-gradient(90deg,#e31b23 0 33%,#f4c542 33% 66%,#16a05d 66% 100%)!important;
+  z-index:1!important;
+}
+.site-header .logo{background:transparent!important;border-radius:0!important;padding:0!important;box-shadow:none!important;}
+.site-header .logo-image,.site-header .site-brand-logo{filter:drop-shadow(0 4px 8px rgba(0,0,0,.22))!important;background:transparent!important;}
+.site-header #live-date{color:#fff!important;background:rgba(0,0,0,.20)!important;border:1px solid rgba(255,255,255,.18)!important;}
+
+/* Existing navigation/menu bar */
+.nav{
+  background:linear-gradient(90deg,#003d2e,#00563f,#08263a)!important;
+  border-bottom:3px solid #e31b23!important;
+  box-shadow:0 4px 12px rgba(0,0,0,.18)!important;
+}
+.nav-inner{background:transparent!important;}
+.nav a{
+  color:#fff!important;
+  font-weight:700!important;
+  transition:all .18s ease!important;
+}
+.nav a:hover,.nav a.active{
+  background:#e31b23!important;
+  color:#fff!important;
+  transform:translateY(-1px)!important;
+}
+
+/* Existing inner-page logo/header bar */
+.brand-header{
+  position:relative!important;
+  background:linear-gradient(135deg,#004d3a 0%,#006a4e 58%,#0b2f45 100%)!important;
+  border-bottom:4px solid #e31b23!important;
+  box-shadow:0 4px 18px rgba(0,0,0,.14)!important;
+}
+.brand-header:before{
+  content:""!important;position:absolute!important;left:0!important;right:0!important;top:0!important;height:4px!important;
+  background:linear-gradient(90deg,#e31b23 0 33%,#f4c542 33% 66%,#16a05d 66% 100%)!important;
+}
+.brand-header .site-brand-logo{
+  background:transparent!important;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.24))!important;
+}
+.brand-header .back-btn{
+  background:#e31b23!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.25)!important;
+  border-radius:7px!important;
+  padding:7px 13px!important;
+  font-weight:700!important;
+  text-decoration:none!important;
+  box-shadow:0 3px 8px rgba(0,0,0,.16)!important;
+}
+.brand-header .back-btn:hover{
+  background:#006a4e!important;
+  color:#fff!important;
+}
+
+/* Existing footer */
+.site-footer{
+  background:linear-gradient(135deg,#0b2638 0%,#071b2a 100%)!important;
+  color:#fff!important;
+  border-top:4px solid #006a4e!important;
+  box-shadow:0 -4px 18px rgba(0,0,0,.10)!important;
+}
+.site-footer h3{color:#fff!important;}
+.site-footer p{color:#dbe7ed!important;}
+.site-footer a{color:#fff!important;}
+.site-footer a:hover{color:#f4c542!important;text-decoration:none!important;}
+@media(max-width:768px){
+  .brand-header .back-btn{padding:6px 10px!important;font-size:13px!important;}
+}
+</style>
+
+
+<style id="desktop-news-images-no-crop-final">
+/* Desktop-only fix: preserve the full news image; do not crop Sheet images. Mobile rules remain unchanged. */
+@media (min-width:769px){
+  .news-card img,
+  .news-image img,
+  .news-image-wrap img,
+  .details-container>img,
+  .detail-inline-media img{
+    width:100% !important;
+    height:auto !important;
+    max-height:520px !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    display:block !important;
+  }
+}
+</style>
+
+
+<style id="final-desktop-news-no-crop-v2">
+/* FINAL V2: Desktop news images keep their original aspect ratio; only the six homepage category cards keep their fixed 410x170 frame. */
+@media (min-width:769px){
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-primary-image,
+  .news-grid .news-card .news-image-top,
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  #news-grid .news-primary-image,
+  #news-container .news-primary-image {
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+  .news-grid .news-card .news-image-wrap img,
+  .news-grid .news-card .news-primary-image img,
+  .news-grid .news-card .news-image-top img,
+  #news-grid .news-image-wrap img,
+  #news-container .news-image-wrap img,
+  #news-grid .news-primary-image img,
+  #news-container .news-primary-image img {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+</style>
+
+<style id="universal-any-image-no-crop-final">
+/* Universal image handling: any Google Sheet / dynamic news image keeps its original aspect ratio.
+   No manual width/height is required and no part of the image is cropped. */
+.news-grid .news-card .news-image-wrap,
+.news-grid .news-card .news-image-top,
+#news-grid .news-image-wrap,
+#news-container .news-image-wrap,
+.news-image-wrap,
+.news-image-top,
+.sheet-media-gallery,
+.inline-media,
+.detail-inline-media,
+.reader-inline-media {
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  overflow:visible!important;
+}
+.news-grid .news-card .news-image-wrap img,
+.news-grid .news-card .news-image-top img,
+#news-grid .news-image-wrap img,
+#news-container .news-image-wrap img,
+.news-image-wrap img,
+.news-image-top img,
+.sheet-media-gallery img,
+.inline-media img,
+.detail-inline-media img,
+.reader-inline-media img,
+.details-container>img {
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  aspect-ratio:auto!important;
+  object-fit:contain!important;
+  object-position:center!important;
+}
+@media(max-width:768px){
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-image-top,
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  .news-image-wrap, .news-image-top {
+    height:auto!important; max-height:none!important; aspect-ratio:auto!important; overflow:visible!important;
+  }
+  .news-grid .news-card .news-image-wrap img,
+  .news-grid .news-card .news-image-top img,
+  #news-grid .news-image-wrap img,
+  #news-container .news-image-wrap img,
+  .news-image-wrap img, .news-image-top img {
+    width:100%!important; height:auto!important; max-height:none!important; aspect-ratio:auto!important; object-fit:contain!important;
+  }
+}
+</style>
+
+
+<style id="desktop-natural-image-width-final">
+/* Desktop only: slightly narrow dynamic news image frame so the natural image height
+   becomes visible. This pushes the headline naturally downward and prevents cropping.
+   Mobile is intentionally untouched because it is already correct. */
+@media (min-width:769px){
+  .vertical-news-block .news-image-top,
+  #news-container .news-image-wrap,
+  #news-grid .news-image-wrap,
+  .news-grid .news-card .news-image-wrap {
+    width: min(92%, 920px) !important;
+    max-width: 920px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .vertical-news-block .news-image-top img,
+  #news-container .news-image-wrap img,
+  #news-grid .news-image-wrap img,
+  .news-grid .news-card .news-image-wrap img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+}
+</style>
+
+
+<style id="details-style-image-width-final">
+/* Match the current Details-page image content width on desktop.
+   Keep equal left/right space; keep mobile responsive. */
+@media (min-width:769px){
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-image-top,
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  .vertical-news-block .news-image-top {
+    width:100% !important;
+    max-width:798px !important;
+    height:auto !important;
+    max-height:none !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    overflow:visible !important;
+  }
+  .news-grid .news-card .news-image-wrap img,
+  .news-grid .news-card .news-image-top img,
+  #news-grid .news-image-wrap img,
+  #news-container .news-image-wrap img,
+  .vertical-news-block .news-image-top img {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+@media (max-width:768px){
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-image-top,
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  .vertical-news-block .news-image-top {
+    width:100% !important;
+    max-width:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
+}
+</style>
+
+
+<style id="details-style-three-line-final">
+/* Show exactly three lines of the existing news summary before the existing Read More link. */
+.home-summary,.news-summary{
+  display:-webkit-box !important;
+  -webkit-box-orient:vertical !important;
+  -webkit-line-clamp:3 !important;
+  overflow:hidden !important;
+}
+</style>
+
+
+<style id="final-news-image-full-width-natural-height">
+/* Final image sizing: fill the existing news area on desktop; keep the image uncropped.
+   Height remains automatic, so a wider image becomes naturally taller. Details page untouched. */
+@media (min-width:769px){
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-image-top,
+  .vertical-news-block .news-image-top {
+    width:calc(100% + 40px) !important;
+    max-width:none !important;
+    height:auto !important;
+    max-height:none !important;
+    margin-left:-20px !important;
+    margin-right:-20px !important;
+    overflow:visible !important;
+  }
+  #news-grid .news-image-wrap img,
+  #news-container .news-image-wrap img,
+  .news-grid .news-card .news-image-wrap img,
+  .news-grid .news-card .news-image-top img,
+  .vertical-news-block .news-image-top img {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    max-width:none !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+</style>
+
+<style id="final-news-content-narrow-full-image">
+/* Final listing-page width: slightly narrower content so the full image is visible cleanly. Details page is untouched. */
+@media (min-width:769px){
+  .container:has(#news-grid),
+  .container:has(#news-container){
+    width:92% !important;
+    max-width:850px !important;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    box-sizing:border-box !important;
+  }
+  #news-grid .news-image-wrap,
+  #news-container .news-image-wrap,
+  .news-grid .news-card .news-image-wrap,
+  .news-grid .news-card .news-image-top,
+  .vertical-news-block .news-image-top{
+    width:100% !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:none !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    overflow:visible !important;
+  }
+  #news-grid .news-image-wrap img,
+  #news-container .news-image-wrap img,
+  .news-grid .news-card .news-image-wrap img,
+  .news-grid .news-card .news-image-top img,
+  .vertical-news-block .news-image-top img{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    max-width:100% !important;
+    max-height:none !important;
+    aspect-ratio:auto !important;
+    object-fit:contain !important;
+    object-position:center !important;
+  }
+}
+</style>
+
+
+<style id="all-listing-pages-width-1050">
+/* Listing pages: 1050px content width. Details page is intentionally excluded. */
+@media (min-width:769px){
+  .container{width:92% !important; max-width:1050px !important; margin-left:auto !important; margin-right:auto !important; box-sizing:border-box !important;}
+}
+/* Google Sheet news order: image → date → headline → details */
+.news-grid .news-card{display:flex;flex-direction:column;}
+.news-grid .news-card .news-image-wrap,.news-grid .news-card .news-image-top,.vertical-news-block .news-image-top{order:1;}
+.news-grid .news-card .news-details,.vertical-news-block .news-text-bottom{order:2;}
+.news-grid .news-card .news-details{display:flex;flex-direction:column;}
+.news-grid .news-card .news-details .news-date{order:1;}
+.news-grid .news-card .news-details h2,.news-grid .news-card .news-details h3{order:2;}
+.news-grid .news-card .news-details .home-summary,.news-grid .news-card .news-details .news-summary{order:3;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;line-height:1.75;}
+.news-grid .news-card .news-details .read-more-btn{order:4;align-self:flex-start;}
+@media (min-width:769px){
+  .news-grid .news-card .news-image-wrap,.news-grid .news-card .news-image-top,.vertical-news-block .news-image-top{width:100% !important;max-width:100% !important;height:auto !important;max-height:none !important;margin-left:0 !important;margin-right:0 !important;overflow:visible !important;}
+  .news-grid .news-card .news-image-wrap img,.news-grid .news-card .news-image-top img,.vertical-news-block .news-image-top img{width:100% !important;height:auto !important;max-width:100% !important;max-height:none !important;aspect-ratio:auto !important;object-fit:contain !important;object-position:center !important;display:block !important;}
+}
+</style>
+
+
+<style id="FINAL-SEPARATE-IMAGE-FROM-NEWS-TEXT">
+/* ছবি এবং নিউজ লেখা আলাদা অংশ — Details পেজে প্রয়োগ করা হয়নি */
+.news-grid .news-card, #news-grid .news-card {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+.news-grid .news-card .news-image-wrap,
+#news-grid .news-card .news-image-wrap,
+.news-grid .news-card > .news-image,
+#news-grid .news-card > .news-image {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 16px 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.news-grid .news-card .news-image-wrap img,
+#news-grid .news-card .news-image-wrap img,
+.news-grid .news-card > .news-image img,
+#news-grid .news-card > .news-image img {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+.news-grid .news-card .news-details,
+#news-grid .news-card .news-card-content,
+#news-container .news-card .news-details {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.news-grid .news-card + .news-card {
+  border-top: none !important;
+  padding-top: 0 !important;
+}
+/* Home/index-এর বড় খবর: ছবির ব্লক ও লেখার ব্লক আলাদা */
+.vertical-news-block {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+  padding: 0 !important;
+}
+.vertical-news-block .news-image-top {
+  margin: 0 0 16px 0 !important;
+  border: none !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.vertical-news-block .news-image-top img {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+.vertical-news-block .news-text-bottom {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+</style>
+
 </head>
 <body>
 <div class="news-ticker" aria-label="সর্বশেষ বার্তা"><div class="news-ticker-label">বিশেষ বার্তা</div><div class="news-ticker-track"><span class="news-ticker-text">সত্য ও নির্ভরযোগ্য সংবাদ জানতে চোখ রাখুন বাংলা সংবাদের সঙ্গে—তথ্য যাচাই করে, দায়িত্বশীলতার সঙ্গে প্রতিটি গুরুত্বপূর্ণ খবর পৌঁছে দিতে আমরা আছি আপনাদের পাশে।</span></div></div>
@@ -442,7 +907,7 @@ function imageUrl(url){
 }
 
 function image1(n){return n.image?`<div class="news-image-wrap"><img loading="lazy" src="${esc(imageUrl(n.image))}" alt="${esc(n.title)}" onerror="this.closest('.news-image-wrap')?.remove()"></div>`:'';}
-function card(n,catLabel){return `<div class="news-card" id="news-${esc(n.id)}">${image1(n)}<div class="news-details"><span class="category-tag">${esc(catLabel||n.category)}</span><span class="news-date">${esc(n.date)}</span><h3>${esc(n.title)}</h3><p class="home-summary">${esc(n.summary)}</p><a class="read-more-btn" href="details.html?id=${encodeURIComponent(n.id)}" data-news-id="${esc(n.id)}">আরও পড়ুন</a></div></div>`;}
+function card(n,catLabel){return `<div class="news-card" id="news-${esc(n.id)}">${image1(n)}<div class="news-details"><span class="news-date">${esc(n.date)}</span><h3>${esc(n.title)}</h3><p class="home-summary">${esc(n.summary)}</p><a class="read-more-btn" href="details.html?id=${encodeURIComponent(n.id)}" data-news-id="${esc(n.id)}">আরও পড়ুন</a></div></div>`;}
 function latest(list){return [...list].reverse();}
 
 const ALLOWED=['politics', 'রাজনীতি'];
