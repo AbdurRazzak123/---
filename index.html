@@ -1467,6 +1467,34 @@ section.news-grid > article:nth-child(6) .news-image img {
 }
 </style>
 
+
+<style id="index-image-natural-and-category-clean">
+/* Index main news image: no fixed height/crop */
+.vertical-news-block .news-image-top{
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  overflow:visible !important;
+}
+.vertical-news-block .news-image-top img{
+  width:100% !important;
+  height:auto !important;
+  max-height:none !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  display:block !important;
+}
+/* Index category text: remove the separate red/color treatment */
+.vertical-news-block .category-tag{
+  color:inherit !important;
+  background:transparent !important;
+  border:none !important;
+  box-shadow:none !important;
+  padding:0 !important;
+  margin:0 0 6px 0 !important;
+}
+</style>
 </head>
 
 <body>
